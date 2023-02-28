@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700,800"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="css/default.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <title>Atlant Construct</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content">
+                <header class="header">
+                    <div class="header__menu">
+                        <div class="header__container">
+                            <div class="mobile__menu"></div>
+                            <div class="header__logo">
+                                <a href="#" class="logo__link">
+                                    <svg
+                                        width="51"
+                                        height="50"
+                                        viewBox="0 0 51 50"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    >
+                                        <rect
+                                            width="51"
+                                            height="50"
+                                            fill="url(#pattern0)"
+                                        />
+                                        <defs>
+                                            <pattern
+                                                id="pattern0"
+                                                patternContentUnits="objectBoundingBox"
+                                                width="1"
+                                                height="1"
+                                            >
+                                                <use
+                                                    xlink:href="#image0_1_65"
+                                                    transform="matrix(0.00357627 0 0 0.0036478 -0.000678259 0)"
+                                                />
+                                            </pattern>
+                                            <image
+                                                id="image0_1_65"
+                                                width="280"
+                                                height="318"
+                                                xlink:href="data:image/png;base64,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"
+                                            />
+                                        </defs>
+                                    </svg>
+
+                                    <img
+                                        class="logo__img"
+                                        src="img/image 2.png"
+                                        alt="img"
+                                    />
+                                </a>
+                            </div>
+                            <nav class="header__nav">
+                                <ul class="header__list">
+                                    <li>
+                                        <a href="#" class="header__item">
+                                            Виды строительства
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="header__item">
+                                            Мы построили
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="header__item">
+                                            Партнёрам
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="header__item">
+                                            Вакансии
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="header__item">
+                                            О компании
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="header__button button">Связаться</div>
+                            <!--**************************************************
+                                **************************************************
+                                **************************************************
+                                BURGER
+                                **************************************************
+                                **************************************************
+                                **************************************************
+                            -->
+                            <div class="menu__burger">
+                                <span></span>
+                            </div>
+                            <!--**************************************************
+                                **************************************************
+                                **************************************************
+                                BURGER
+                                **************************************************
+                                **************************************************
+                                **************************************************
+                            -->
+                        </div>
+                    </div>
+                </header>
+
+                <main class="page">
+                    <section class="page__main">
+                        <div class="main__container container">
+                            <div class="main__text">
+                                <h1 class="title">Atlant Construct</h1>
+                                <p class="paragraph">
+                                    11 лет опыта индустриального строительства в
+                                    Молдове и Кишинёве.
+                                </p>
+                                <div class="main__bottom">
+                                    <a href="#">
+                                        <h6 class="main__link">ПРОЕКТЫ</h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="page__build">
+                        <div class="build__container container">
+                            <div class="build__top">
+                                <div class="top__item">
+                                    <h6>70+</h6>
+                                    <p class="paragraph">
+                                        Объектов построили под ключ
+                                    </p>
+                                </div>
+                                <div class="top__item">
+                                    <h6>540+</h6>
+                                    <p class="paragraph">Проектов вели</p>
+                                </div>
+                                <div class="top__item">
+                                    <h6>47357</h6>
+                                    <p class="paragraph">
+                                        Часов мы провели на объектах
+                                    </p>
+                                </div>
+                                <div class="top__item">
+                                    <h6>25+</h6>
+                                    <p class="paragraph">
+                                        Сотрудников работает
+                                    </p>
+                                </div>
+                            </div>
+                            <h2 class="title">Мы строим</h2>
+                            <div class="build__block">
+                                <div class="block__item">
+                                    <h6>Склады</h6>
+                                    <div class="block__img">
+                                        <svg
+                                            width="32"
+                                            height="32"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <g clip-path="url(#clip0_1_97)">
+                                                <path
+                                                    d="M24 13.3333H32L28 8L24 13.3333ZM24 18.6667H32L28 24L24 18.6667Z"
+                                                    fill="#D6B1FF"
+                                                />
+                                                <path
+                                                    d="M1.33333 0H9.33333V32H1.33333C0.979711 32 0.640572 31.8595 0.390523 31.6095C0.140475 31.3594 0 31.0203 0 30.6667V1.33333C0 0.979711 0.140475 0.640572 0.390523 0.390523C0.640572 0.140475 0.979711 0 1.33333 0Z"
+                                                    fill="#8C30F5"
+                                                />
+                                                <path
+                                                    d="M12 0H20C20.3536 0 20.6928 0.140475 20.9428 0.390523C21.1929 0.640572 21.3333 0.979711 21.3333 1.33333V30.6667C21.3333 31.0203 21.1929 31.3594 20.9428 31.6095C20.6928 31.8595 20.3536 32 20 32H12V0Z"
+                                                    fill="#2EC5CE"
+                                                />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1_97">
+                                                    <rect
+                                                        width="32"
+                                                        height="32"
+                                                        fill="white"
+                                                    />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <img src="img/01.png" alt="img" />
+                                    </div>
+                                </div>
+                                <div class="block__item">
+                                    <h6>Холодильные камеры</h6>
+                                    <div class="block__img">
+                                        <svg
+                                            width="32"
+                                            height="32"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M5.33398 1.3335H30.6673L26.6673 9.3335H1.33398L5.33398 1.3335Z"
+                                                fill="#8C30F5"
+                                            />
+                                            <path
+                                                d="M5.33398 12H30.6673L26.6673 20H1.33398L5.33398 12Z"
+                                                fill="#2EC5CE"
+                                            />
+                                            <path
+                                                d="M5.33398 22.667H30.6673L26.6673 30.667H1.33398L5.33398 22.667Z"
+                                                fill="#D6B1FF"
+                                            />
+                                        </svg>
+
+                                        <img src="img/02.png" alt="img" />
+                                    </div>
+                                </div>
+                                <div class="block__item">
+                                    <h6>Логистические центры</h6>
+                                    <div class="block__img">
+                                        <svg
+                                            width="30"
+                                            height="30"
+                                            viewBox="0 0 30 30"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M29.6673 7.00016V1.66683C29.6673 1.31321 29.5268 0.974068 29.2768 0.724019C29.0267 0.473971 28.6876 0.333496 28.334 0.333496H1.66732C1.3137 0.333496 0.974556 0.473971 0.724508 0.724019C0.474459 0.974068 0.333984 1.31321 0.333984 1.66683V7.00016H29.6673Z"
+                                                fill="#2EC5CE"
+                                            />
+                                            <path
+                                                d="M0.333984 9.66699V28.3337C0.333984 28.6873 0.474459 29.0264 0.724508 29.2765C0.974556 29.5265 1.3137 29.667 1.66732 29.667H8.33398V9.66699H0.333984Z"
+                                                fill="#D6B1FF"
+                                            />
+                                            <path
+                                                d="M11 29.667H28.3333C28.687 29.667 29.0261 29.5265 29.2761 29.2765C29.5262 29.0264 29.6667 28.6873 29.6667 28.3337V9.66699H11V29.667Z"
+                                                fill="#8C30F5"
+                                            />
+                                        </svg>
+
+                                        <img src="img/03.png" alt="img" />
+                                    </div>
+                                </div>
+                                <div class="block__item">
+                                    <h6>Производств. помещения</h6>
+                                    <div class="block__img">
+                                        <svg
+                                            width="28"
+                                            height="32"
+                                            viewBox="0 0 28 32"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M25.9993 31.9998H13.9993C13.6457 31.9998 13.3066 31.8594 13.0565 31.6093C12.8065 31.3593 12.666 31.0201 12.666 30.6665V27.9998C12.666 27.6462 12.8065 27.3071 13.0565 27.057C13.3066 26.807 13.6457 26.6665 13.9993 26.6665H25.9993C26.353 26.6665 26.6921 26.807 26.9422 27.057C27.1922 27.3071 27.3327 27.6462 27.3327 27.9998V30.6665C27.3327 31.0201 27.1922 31.3593 26.9422 31.6093C26.6921 31.8594 26.353 31.9998 25.9993 31.9998Z"
+                                                fill="#D6B1FF"
+                                            />
+                                            <path
+                                                d="M25.9993 0H1.99935C1.64573 0 1.30659 0.140475 1.05654 0.390523C0.80649 0.640572 0.666016 0.979711 0.666016 1.33333V4C0.666016 4.35362 0.80649 4.69276 1.05654 4.94281C1.30659 5.19286 1.64573 5.33333 1.99935 5.33333H25.9993C26.353 5.33333 26.6921 5.19286 26.9422 4.94281C27.1922 4.69276 27.3327 4.35362 27.3327 4V1.33333C27.3327 0.979711 27.1922 0.640572 26.9422 0.390523C26.6921 0.140475 26.353 0 25.9993 0Z"
+                                                fill="#2EC5CE"
+                                            />
+                                            <path
+                                                d="M25.9993 8H1.99935C1.64573 8 1.30659 8.14047 1.05654 8.39052C0.80649 8.64057 0.666016 8.97971 0.666016 9.33333V22.6667C0.666016 23.0203 0.80649 23.3594 1.05654 23.6095C1.30659 23.8595 1.64573 24 1.99935 24H25.9993C26.353 24 26.6921 23.8595 26.9422 23.6095C27.1922 23.3594 27.3327 23.0203 27.3327 22.6667V9.33333C27.3327 8.97971 27.1922 8.64057 26.9422 8.39052C26.6921 8.14047 26.353 8 25.9993 8Z"
+                                                fill="#8C30F5"
+                                            />
+                                        </svg>
+
+                                        <img src="img/04.png" alt="img" />
+                                    </div>
+                                </div>
+                                <div class="block__item">
+                                    <h6>Холодильные камеры</h6>
+                                    <div class="block__img">
+                                        <svg
+                                            width="32"
+                                            height="32"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M6.66732 1.3335H2.66732C2.3137 1.3335 1.97456 1.47397 1.72451 1.72402C1.47446 1.97407 1.33398 2.31321 1.33398 2.66683V29.3335C1.33398 29.6871 1.47446 30.0263 1.72451 30.2763C1.97456 30.5264 2.3137 30.6668 2.66732 30.6668H6.66732V1.3335Z"
+                                                fill="#D6B1FF"
+                                            />
+                                            <path
+                                                d="M9.33398 30.6668H22.6673V1.3335H9.33398V30.6668ZM16.0007 25.3335C15.647 25.3335 15.3079 25.193 15.0578 24.943C14.8078 24.6929 14.6673 24.3538 14.6673 24.0002C14.6673 23.6465 14.8078 23.3074 15.0578 23.0574C15.3079 22.8073 15.647 22.6668 16.0007 22.6668C16.3543 22.6668 16.6934 22.8073 16.9435 23.0574C17.1935 23.3074 17.334 23.6465 17.334 24.0002C17.334 24.3538 17.1935 24.6929 16.9435 24.943C16.6934 25.193 16.3543 25.3335 16.0007 25.3335ZM16.0007 6.66683C16.3543 6.66683 16.6934 6.8073 16.9435 7.05735C17.1935 7.3074 17.334 7.64654 17.334 8.00016C17.334 8.35378 17.1935 8.69292 16.9435 8.94297C16.6934 9.19302 16.3543 9.3335 16.0007 9.3335C15.647 9.3335 15.3079 9.19302 15.0578 8.94297C14.8078 8.69292 14.6673 8.35378 14.6673 8.00016C14.6673 7.64654 14.8078 7.3074 15.0578 7.05735C15.3079 6.8073 15.647 6.66683 16.0007 6.66683ZM16.0007 14.6668C16.3543 14.6668 16.6934 14.8073 16.9435 15.0574C17.1935 15.3074 17.334 15.6465 17.334 16.0002C17.334 16.3538 17.1935 16.6929 16.9435 16.943C16.6934 17.193 16.3543 17.3335 16.0007 17.3335C15.647 17.3335 15.3079 17.193 15.0578 16.943C14.8078 16.6929 14.6673 16.3538 14.6673 16.0002C14.6673 15.6465 14.8078 15.3074 15.0578 15.0574C15.3079 14.8073 15.647 14.6668 16.0007 14.6668Z"
+                                                fill="#8C30F5"
+                                            />
+                                            <path
+                                                d="M29.334 1.3335H25.334V30.6668H29.334C29.6876 30.6668 30.0267 30.5264 30.2768 30.2763C30.5268 30.0263 30.6673 29.6871 30.6673 29.3335V2.66683C30.6673 2.31321 30.5268 1.97407 30.2768 1.72402C30.0267 1.47397 29.6876 1.3335 29.334 1.3335Z"
+                                                fill="#2EC5CE"
+                                            />
+                                        </svg>
+
+                                        <img src="img/05.png" alt="img" />
+                                    </div>
+                                </div>
+                                <div class="block__item">
+                                    <h6>Склады</h6>
+                                    <div class="block__img">
+                                        <svg
+                                            width="32"
+                                            height="32"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M31.466 1.60016C31.1993 1.3335 30.666 1.3335 30.266 1.3335L22.666 3.60016V30.4002L31.066 28.0002C31.5993 27.8668 31.9993 27.3335 31.9993 26.6668V2.66683C31.9993 2.26683 31.866 1.86683 31.466 1.60016Z"
+                                                fill="#D6B1FF"
+                                            />
+                                            <path
+                                                d="M20 3.6001L12 1.6001V28.4001L20 30.4001V3.6001Z"
+                                                fill="#2EC5CE"
+                                            />
+                                            <path
+                                                d="M9.33333 1.6001L0.933334 4.0001C0.400001 4.26676 0 4.8001 0 5.33343V29.3334C0 29.7334 0.133333 30.1334 0.533333 30.4001C0.799999 30.5334 1.06667 30.6668 1.33333 30.6668H1.73333L9.33333 28.4001V1.6001Z"
+                                                fill="#8C30F5"
+                                            />
+                                        </svg>
+
+                                        <img src="img/06.png" alt="img" />
+                                    </div>
+                                </div>
+                                <div class="block__item">
+                                    <h6>Логистические центры</h6>
+                                    <div class="block__img">
+                                        <svg
+                                            width="30"
+                                            height="30"
+                                            viewBox="0 0 30 30"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M11.0007 12.3335H1.66732C1.3137 12.3335 0.974556 12.193 0.724508 11.943C0.474459 11.6929 0.333984 11.3538 0.333984 11.0002V1.66683C0.333984 1.31321 0.474459 0.974068 0.724508 0.724019C0.974556 0.473971 1.3137 0.333496 1.66732 0.333496H11.0007C11.3543 0.333496 11.6934 0.473971 11.9435 0.724019C12.1935 0.974068 12.334 1.31321 12.334 1.66683V11.0002C12.334 11.3538 12.1935 11.6929 11.9435 11.943C11.6934 12.193 11.3543 12.3335 11.0007 12.3335Z"
+                                                fill="#8C30F5"
+                                            />
+                                            <path
+                                                d="M11.0007 29.667H1.66732C1.3137 29.667 0.974556 29.5265 0.724508 29.2765C0.474459 29.0264 0.333984 28.6873 0.333984 28.3337V19.0003C0.333984 18.6467 0.474459 18.3076 0.724508 18.0575C0.974556 17.8075 1.3137 17.667 1.66732 17.667H11.0007C11.3543 17.667 11.6934 17.8075 11.9435 18.0575C12.1935 18.3076 12.334 18.6467 12.334 19.0003V28.3337C12.334 28.6873 12.1935 29.0264 11.9435 29.2765C11.6934 29.5265 11.3543 29.667 11.0007 29.667Z"
+                                                fill="#8C30F5"
+                                            />
+                                            <path
+                                                d="M16.334 1.66699H29.6673V4.33366H16.334V1.66699Z"
+                                                fill="#2EC5CE"
+                                            />
+                                            <path
+                                                d="M29.6673 19H16.334V21.6667H29.6673V19Z"
+                                                fill="#2EC5CE"
+                                            />
+                                            <path
+                                                d="M29.6673 25.667H16.334V28.3337H29.6673V25.667Z"
+                                                fill="#D6B1FF"
+                                            />
+                                            <path
+                                                d="M29.6673 8.3335H16.334V11.0002H29.6673V8.3335Z"
+                                                fill="#D6B1FF"
+                                            />
+                                        </svg>
+
+                                        <img src="img/07.png" alt="img" />
+                                    </div>
+                                </div>
+                                <div class="block__item">
+                                    <h6>Производств. помещения</h6>
+                                    <div class="block__img">
+                                        <svg
+                                            width="32"
+                                            height="32"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M15.2064 0.175931L0.779694 6.91593C0.682133 6.96067 0.599485 7.0325 0.541588 7.12288C0.483691 7.21325 0.452985 7.31836 0.453125 7.42569C0.453266 7.53302 0.484246 7.63805 0.542379 7.72827C0.600513 7.8185 0.683349 7.89011 0.781027 7.9346L15.321 14.6253C15.7504 14.8226 16.2464 14.8226 16.6757 14.6253L31.2157 7.9346C31.3134 7.89024 31.3964 7.81873 31.4546 7.72859C31.5129 7.63844 31.544 7.53345 31.5443 7.42612C31.5445 7.31879 31.514 7.21364 31.4562 7.12319C31.3984 7.03274 31.3159 6.9608 31.2184 6.91593L16.7904 0.175931C16.5424 0.0600563 16.2721 0 15.9984 0C15.7247 0 15.4543 0.0600563 15.2064 0.175931Z"
+                                                fill="#8C30F5"
+                                            />
+                                            <path
+                                                opacity="0.64"
+                                                d="M31.219 15.5679L28.239 14.1759C28.0256 14.0761 27.793 14.0241 27.5575 14.0234C27.3219 14.0228 27.089 14.0734 26.875 14.1719L16.6764 18.8652C16.4639 18.9629 16.2329 19.0135 15.999 19.0135C15.7652 19.0135 15.5341 18.9629 15.3217 18.8652L5.1217 14.1719C4.90788 14.0736 4.67524 14.0231 4.43992 14.0237C4.20461 14.0244 3.97227 14.0763 3.75903 14.1759L0.779029 15.5679C0.681526 15.6127 0.598972 15.6847 0.541193 15.7751C0.483414 15.8656 0.452846 15.9707 0.453127 16.0781C0.453408 16.1854 0.484525 16.2904 0.542777 16.3805C0.601029 16.4707 0.683961 16.5422 0.781697 16.5865L15.3217 23.2759C15.534 23.3741 15.7651 23.4249 15.999 23.4249C16.2329 23.4249 16.4641 23.3741 16.6764 23.2759L31.2164 16.5865C31.3141 16.5422 31.397 16.4707 31.4553 16.3805C31.5135 16.2904 31.5447 16.1854 31.5449 16.0781C31.5452 15.9707 31.5146 15.8656 31.4569 15.7751C31.3991 15.6847 31.3165 15.6127 31.219 15.5679Z"
+                                                fill="#D6B1FF"
+                                            />
+                                            <path
+                                                d="M31.2195 24.1441L28.2395 22.7521C28.0261 22.6524 27.7935 22.6004 27.558 22.5997C27.3224 22.599 27.0895 22.6496 26.8755 22.7481L16.6769 27.4401C16.4644 27.5378 16.2334 27.5883 15.9995 27.5883C15.7657 27.5883 15.5346 27.5378 15.3222 27.4401L5.1222 22.7468C4.90838 22.6485 4.67574 22.5979 4.44042 22.5986C4.20511 22.5993 3.97277 22.6512 3.75953 22.7507L0.77953 24.1441C0.682403 24.1891 0.60022 24.261 0.542716 24.3513C0.485213 24.4416 0.454799 24.5465 0.45508 24.6536C0.455361 24.7607 0.486325 24.8654 0.544301 24.9554C0.602277 25.0454 0.684836 25.1169 0.782198 25.1614L15.3222 31.8521C15.7515 32.0494 16.2475 32.0494 16.6769 31.8521L31.2169 25.1614C31.3142 25.1169 31.3968 25.0454 31.4548 24.9554C31.5127 24.8654 31.5437 24.7607 31.544 24.6536C31.5443 24.5465 31.5138 24.4416 31.4563 24.3513C31.3988 24.261 31.3167 24.1891 31.2195 24.1441Z"
+                                                fill="#2EC5CE"
+                                            />
+                                        </svg>
+
+                                        <img src="img/08.png" alt="img" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="page__smeta">
+                        <div class="smeta__left"></div>
+                        <div class="smeta__right"></div>
+                        <div class="smeta__container container">
+                            <div class="smeta__item item-1">
+                                <h2 class="title">
+                                    Смета на ремонт по готовому дизайну
+                                </h2>
+                                <p class="paragraph">
+                                    Рассчитайте стоимость своего ремонта за 10
+                                    мин
+                                </p>
+                                <div class="how__work">
+                                    <a href="#" class="how__work_link">
+                                        Как это работает?
+                                    </a>
+                                </div>
+                                <div class="smeta__img">
+                                    <div class="smeta__button">
+                                        Выбрать дизайн
+                                    </div>
+                                    <img src="img/image 5.png" alt="smeta" />
+                                </div>
+                            </div>
+                            <div class="smeta__item item-2">
+                                <h2 class="title">Быстрая смета на ремонт</h2>
+                                <p class="paragraph">
+                                    Дизайн не важен или готов свой?<br />Рассчитайте
+                                    стоимость ремонта за 5 минут
+                                </p>
+                                <div class="how__work">
+                                    <a href="#" class="how__work_link">
+                                        Как это работает?
+                                    </a>
+                                </div>
+                                <div class="smeta__img">
+                                    <div class="smeta__button-2">
+                                        Выбрать дизайн
+                                    </div>
+                                    <img
+                                        src="img/image 5 копия.png"
+                                        alt="smeta"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="page__projects">
+                        <div class="projects__container container">
+                            <h2 class="title">Наши проекты</h2>
+                            <div class="projects__block">
+                                <div class="projects__item">
+                                    <h6>
+                                        <strong>Склад</strong> - для компании
+                                        Nestle
+                                    </h6>
+                                    <div class="projects__img">
+                                        <img src="img/pr-1.jpg" alt="project" />
+                                    </div>
+                                    <div class="item__bottom">
+                                        <p><strong>4 МЕС.</strong></p>
+                                        <div class="button">Подробнее</div>
+                                    </div>
+                                </div>
+                                <div class="projects__item">
+                                    <h6>
+                                        <strong>Логистический центр</strong> -
+                                        Linello
+                                    </h6>
+                                    <div class="projects__img">
+                                        <img src="img/pr-2.jpg" alt="project" />
+                                    </div>
+                                    <div class="item__bottom">
+                                        <p><strong>24 МЕС.</strong></p>
+                                        <div class="button">Подробнее</div>
+                                    </div>
+                                </div>
+                                <div class="projects__item">
+                                    <h6>
+                                        <strong>Реконструкция здания</strong>
+                                    </h6>
+                                    <div class="projects__img">
+                                        <img src="img/pr-3.jpg" alt="project" />
+                                    </div>
+                                    <div class="item__bottom">
+                                        <p><strong>5 МЕС.</strong></p>
+                                        <div class="button">Подробнее</div>
+                                    </div>
+                                </div>
+                                <div class="projects__item">
+                                    <h6>
+                                        <strong
+                                            >Металлическая конструкция</strong
+                                        >
+                                    </h6>
+                                    <div class="projects__img">
+                                        <img src="img/pr-4.jpg" alt="project" />
+                                    </div>
+                                    <div class="item__bottom">
+                                        <p><strong>13 МЕС.</strong></p>
+                                        <div class="button">Подробнее</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__button button">
+                                Все проекты
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="page__about">
+                        <div class="about__container container">
+                            <div class="about__img">
+                                <img src="img/Creative.png" alt="about" />
+                            </div>
+                            <div class="about__text">
+                                <h6>ATLANT CONSTRUCT</h6>
+                                <h2>О Компании</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Tempora tempore facilis
+                                    accusamus soluta laudantium tenetur
+                                    doloremque voluptatibus minima ipsa quam,
+                                    voluptatem nostrum ex quibusdam aliquam iste
+                                    magnam laborum? Praesentium, ducimus.
+                                </p>
+                                <div class="about__button">Подробнее</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="page__commercial">
+                        <div class="commercial__container container">
+                            <div class="commercial__text">
+                                <h2>Коммерческое предложение</h2>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Laborum eos, explicabo,
+                                    officia modi et magni nesciunt nemo libero
+                                    dolor dolorem earum dolores enim molestiae
+                                    asperiores exercitationem cumque voluptatum.
+                                    Ratione, obcaecati?
+                                </p>
+                                <div class="commercial__button">Скачать</div>
+                            </div>
+                            <div class="commercial__img">
+                                <img src="img/iPhone X.png" alt="phone" />
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="page__gallery">
+                        <div class="gallery__container container">
+                            <h2 class="title">Галерея</h2>
+                            <div class="gallery__block">
+                                <div class="gallery__item">
+                                    <img src="img/gal-1.jpg" alt="img" />
+                                </div>
+                                <div class="gallery__item">
+                                    <img src="img/gal-2.jpg" alt="img" />
+                                </div>
+                                <div class="gallery__item">
+                                    <img src="img/gal-3.jpg" alt="img" />
+                                </div>
+                                <div class="gallery__item">
+                                    <img src="img/gal-4.jpg" alt="img" />
+                                </div>
+                                <div class="gallery__item">
+                                    <img src="img/gal-5.jpg" alt="img" />
+                                </div>
+                                <div class="gallery__item">
+                                    <img src="img/gal-6.jpg" alt="img" />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="page__partners">
+                        <div class="partners__container container">
+                            <h2 class="title">Нам доверяют</h2>
+                            <p class="paragraph">
+                                We have been working with some Fortune 50
+                                clients
+                            </p>
+                            <div class="partners__block">
+                                <div class="single__item partners__item">
+                                    <img src="img/bel-1.png" alt="img" />
+                                </div>
+                                <div class="double__item">
+                                    <div class="partners__item">
+                                        <img src="img/bel-2.png" alt="img" />
+                                    </div>
+                                    <div class="partners__item">
+                                        <img src="img/bel-3.png" alt="img" />
+                                    </div>
+                                </div>
+                                <div class="triple__item">
+                                    <div class="partners__item">
+                                        <img src="img/bel-4.png" alt="img" />
+                                    </div>
+                                    <div class="partners__item">
+                                        <img src="img/bel-5.png" alt="img" />
+                                    </div>
+                                    <div class="partners__item">
+                                        <img src="img/bel-6.png" alt="img" />
+                                    </div>
+                                </div>
+                                <div class="double__item">
+                                    <div class="partners__item">
+                                        <img src="img/bel-7.png" alt="img" />
+                                    </div>
+                                    <div class="partners__item">
+                                        <img src="img/bel-8.png" alt="img" />
+                                    </div>
+                                </div>
+                                <div class="single__item partners__item">
+                                    <img src="img/bel-9.png" alt="img" />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+
+            <footer class="footer">
+                <div class="footer__container container">
+                    <div class="footer__left">
+                        <p>
+                            Atlant Constrcut <br />
+                            Copyright © 2022
+                        </p>
+                        <p class="sec_p">All rights reserved</p>
+                        <ul class="social">
+                            <li>
+                                <a href="#">
+                                    <svg
+                                        width="32"
+                                        height="32"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            opacity="0.1"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                                            fill="white"
+                                        />
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M16.0009 7.4668C13.6834 7.4668 13.3925 7.47693 12.4823 7.51835C11.5739 7.55995 10.9538 7.70378 10.4112 7.9148C9.84993 8.13276 9.37384 8.42432 8.89952 8.89881C8.42485 9.37313 8.13329 9.84922 7.91462 10.4103C7.70307 10.9531 7.55906 11.5733 7.51818 12.4814C7.47746 13.3917 7.4668 13.6827 7.4668 16.0002C7.4668 18.3178 7.47711 18.6077 7.51835 19.5179C7.56013 20.4264 7.70395 21.0465 7.9148 21.5891C8.13294 22.1503 8.4245 22.6264 8.89899 23.1007C9.37313 23.5754 9.84922 23.8677 10.4101 24.0856C10.9531 24.2967 11.5733 24.4405 12.4816 24.4821C13.3918 24.5235 13.6825 24.5336 15.9999 24.5336C18.3176 24.5336 18.6075 24.5235 19.5178 24.4821C20.4262 24.4405 21.047 24.2967 21.59 24.0856C22.151 23.8677 22.6264 23.5754 23.1006 23.1007C23.5752 22.6264 23.8668 22.1503 24.0855 21.5893C24.2952 21.0465 24.4392 20.4262 24.4819 19.5181C24.5228 18.6079 24.5335 18.3178 24.5335 16.0002C24.5335 13.6827 24.5228 13.3918 24.4819 12.4816C24.4392 11.5732 24.2952 10.9531 24.0855 10.4105C23.8668 9.84922 23.5752 9.37313 23.1006 8.89881C22.6259 8.42414 22.1512 8.13258 21.5894 7.9148C21.0454 7.70378 20.425 7.55995 19.5165 7.51835C18.6063 7.47693 18.3165 7.4668 15.9983 7.4668H16.0009ZM15.2354 9.00457C15.4626 9.00421 15.7161 9.00457 16.0009 9.00457C18.2793 9.00457 18.5494 9.01274 19.4491 9.05363C20.2811 9.09168 20.7327 9.2307 21.0335 9.3475C21.4317 9.50217 21.7156 9.68706 22.0141 9.98573C22.3128 10.2844 22.4977 10.5688 22.6527 10.9671C22.7695 11.2675 22.9087 11.7191 22.9466 12.5511C22.9875 13.4507 22.9963 13.7209 22.9963 15.9982C22.9963 18.2756 22.9875 18.5458 22.9466 19.4454C22.9085 20.2774 22.7695 20.729 22.6527 21.0294C22.498 21.4276 22.3128 21.7112 22.0141 22.0097C21.7154 22.3084 21.4319 22.4932 21.0335 22.6479C20.733 22.7652 20.2811 22.9039 19.4491 22.942C18.5495 22.9828 18.2793 22.9917 16.0009 22.9917C13.7223 22.9917 13.4522 22.9828 12.5527 22.942C11.7207 22.9036 11.2691 22.7645 10.9681 22.6477C10.5699 22.4931 10.2855 22.3082 9.98679 22.0095C9.68812 21.7108 9.50323 21.4271 9.3482 21.0287C9.2314 20.7282 9.0922 20.2767 9.05433 19.4447C9.01344 18.5451 9.00527 18.2749 9.00527 15.9961C9.00527 13.7173 9.01344 13.4485 9.05433 12.549C9.09238 11.717 9.2314 11.2654 9.3482 10.9646C9.50287 10.5664 9.68812 10.2819 9.98679 9.98324C10.2855 9.68457 10.5699 9.49968 10.9681 9.34466C11.2689 9.22732 11.7207 9.08866 12.5527 9.05043C13.3399 9.01488 13.645 9.00421 15.2354 9.00243V9.00457ZM20.556 10.4215C19.9906 10.4215 19.532 10.8796 19.532 11.4451C19.532 12.0105 19.9906 12.4691 20.556 12.4691C21.1213 12.4691 21.58 12.0105 21.58 11.4451C21.58 10.8798 21.1213 10.4215 20.556 10.4215ZM16.0009 11.6179C13.5808 11.6179 11.6187 13.5801 11.6187 16.0002C11.6187 18.4203 13.5808 20.3816 16.0009 20.3816C18.4211 20.3816 20.3825 18.4203 20.3825 16.0002C20.3825 13.5801 18.4211 11.6179 16.0009 11.6179ZM16.0009 13.1557C17.5718 13.1557 18.8454 14.4292 18.8454 16.0002C18.8454 17.5711 17.5718 18.8447 16.0009 18.8447C14.4299 18.8447 13.1564 17.5711 13.1564 16.0002C13.1564 14.4292 14.4299 13.1557 16.0009 13.1557Z"
+                                            fill="white"
+                                        />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg
+                                        width="32"
+                                        height="32"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            opacity="0.1"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                                            fill="white"
+                                        />
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M24.5335 15.9883C24.5335 16.5654 24.4747 17.1417 24.3593 17.7034C24.2468 18.2518 24.0801 18.7902 23.8618 19.3049C23.6485 19.8105 23.3839 20.2977 23.0747 20.7521C22.7701 21.2036 22.4192 21.6271 22.0338 22.0133C21.6475 22.3977 21.2225 22.7476 20.7712 23.0535C20.3154 23.3605 19.8275 23.6247 19.3216 23.8391C18.8061 24.0562 18.2665 24.2227 17.7186 24.335C17.1561 24.4507 16.5777 24.5098 15.9997 24.5098C15.4214 24.5098 14.843 24.4507 14.2813 24.335C13.7326 24.2227 13.1929 24.0562 12.6779 23.8391C12.1721 23.6247 11.6837 23.3605 11.2278 23.0535C10.7766 22.7476 10.3516 22.3977 9.96611 22.0133C9.58027 21.6271 9.2294 21.2036 8.92439 20.7521C8.61687 20.2977 8.35184 19.8105 8.13768 19.3049C7.9193 18.7902 7.75224 18.2518 7.63931 17.7034C7.52515 17.1417 7.4668 16.5654 7.4668 15.9883C7.4668 15.4108 7.52511 14.8332 7.63934 14.2727C7.75227 13.7243 7.91934 13.1851 8.13771 12.6712C8.35187 12.1653 8.6169 11.6776 8.92442 11.2232C9.22943 10.7714 9.5803 10.3486 9.96614 9.96207C10.3516 9.57759 10.7766 9.22852 11.2279 8.92312C11.6837 8.61478 12.1721 8.35059 12.6779 8.13587C13.193 7.91822 13.7326 7.75139 14.2814 7.63989C14.8431 7.52506 15.4214 7.4668 15.9998 7.4668C16.5777 7.4668 17.1561 7.52506 17.7186 7.63989C18.2665 7.75142 18.8061 7.91825 19.3216 8.13587C19.8275 8.35056 20.3154 8.61478 20.7713 8.92312C21.2225 9.22852 21.6476 9.57759 22.0338 9.96207C22.4193 10.3486 22.7701 10.7714 23.0747 11.2232C23.3839 11.6776 23.6485 12.1653 23.8618 12.6712C24.0801 13.1851 24.2468 13.7243 24.3593 14.2727C24.4747 14.8332 24.5335 15.4108 24.5335 15.9883ZM12.8904 9.40618C10.8582 10.3645 9.34143 12.2343 8.86848 14.4879C9.0606 14.4895 12.0974 14.5278 15.5963 13.5995C14.335 11.3618 12.9875 9.53562 12.8904 9.40618ZM16.2001 14.7201C12.4479 15.8418 8.84724 15.7611 8.71808 15.7561C8.71597 15.8343 8.71223 15.91 8.71223 15.9883C8.71223 17.8577 9.41851 19.562 10.5794 20.8507C10.5769 20.8469 12.5712 17.3139 16.5039 16.0441C16.5989 16.0124 16.6956 15.9841 16.7914 15.9567C16.6085 15.5431 16.4089 15.1287 16.2001 14.7201ZM20.8125 10.5267C19.5295 9.39701 17.8448 8.71176 15.9997 8.71176C15.4076 8.71176 14.833 8.78333 14.2825 8.91564C14.3917 9.06212 15.7605 10.8754 17.0068 13.1605C19.7566 12.1312 20.7945 10.5533 20.8125 10.5267ZM17.2882 17.1625C17.2719 17.1679 17.2557 17.1725 17.2398 17.1783C12.9401 18.6751 11.536 21.6915 11.5208 21.7245C12.7579 22.6852 14.3097 23.2648 15.9998 23.2648C17.009 23.2648 17.9703 23.0596 18.8449 22.6881C18.737 22.0523 18.3136 19.8238 17.2882 17.1625ZM20.072 22.0232C21.7083 20.9206 22.8705 19.1697 23.1946 17.1416C23.0446 17.0934 21.0058 16.4489 18.6536 16.8254C19.6095 19.4485 19.9978 21.5847 20.072 22.0232ZM17.5678 14.2449C17.7369 14.5919 17.9007 14.9451 18.0519 15.3001C18.1057 15.4274 18.1582 15.5522 18.2095 15.677C20.7129 15.3625 23.1793 15.8917 23.2847 15.9133C23.2681 14.1883 22.6501 12.6051 21.6276 11.3656C21.6138 11.3851 20.445 13.0715 17.5678 14.2449Z"
+                                            fill="white"
+                                        />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg
+                                        width="32"
+                                        height="32"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            opacity="0.1"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                                            fill="white"
+                                        />
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M15.5208 13.0046L15.5544 13.5582L14.9948 13.4905C12.9579 13.2306 11.1784 12.3493 9.66756 10.8692L8.92891 10.1347L8.73865 10.6771C8.33575 11.886 8.59316 13.1628 9.43253 14.0215C9.8802 14.496 9.77948 14.5638 9.00725 14.2814C8.73865 14.191 8.50363 14.1232 8.48124 14.1571C8.4029 14.2362 8.6715 15.2643 8.88414 15.6711C9.17513 16.236 9.76828 16.7897 10.4174 17.1173L10.9658 17.3772L10.3167 17.3885C9.68994 17.3885 9.66756 17.3998 9.73471 17.6371C9.95854 18.3715 10.8427 19.1511 11.8276 19.4901L12.5214 19.7273L11.9171 20.0889C11.0218 20.6086 9.96973 20.9024 8.91772 20.925C8.41409 20.9363 8 20.9815 8 21.0154C8 21.1284 9.36538 21.7611 10.16 22.0097C12.5438 22.7441 15.3753 22.4277 17.5017 21.1736C19.0126 20.281 20.5235 18.5071 21.2286 16.7897C21.6091 15.8745 21.9896 14.2023 21.9896 13.4001C21.9896 12.8803 22.0232 12.8125 22.6499 12.1911C23.0192 11.8295 23.3662 11.4341 23.4333 11.3211C23.5452 11.1064 23.534 11.1064 22.9633 11.2985C22.012 11.6375 21.8777 11.5923 22.3477 11.0838C22.6947 10.7223 23.1088 10.0669 23.1088 9.87487C23.1088 9.84097 22.9409 9.89747 22.7506 9.99916C22.5492 10.1121 22.1015 10.2816 21.7658 10.3833L21.1614 10.5754L20.613 10.2025C20.3108 9.99916 19.8856 9.77318 19.6617 9.70539C19.0909 9.54721 18.218 9.56981 17.7032 9.75059C16.3042 10.259 15.4201 11.5697 15.5208 13.0046Z"
+                                            fill="white"
+                                        />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg
+                                        width="32"
+                                        height="32"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            opacity="0.1"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
+                                            fill="white"
+                                        />
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M22.6679 10.5C23.4022 10.7015 23.9805 11.2953 24.1768 12.0493C24.5335 13.4158 24.5335 16.2671 24.5335 16.2671C24.5335 16.2671 24.5335 19.1183 24.1768 20.485C23.9805 21.239 23.4022 21.8327 22.6679 22.0343C21.3371 22.4005 16.0001 22.4005 16.0001 22.4005C16.0001 22.4005 10.6632 22.4005 9.3323 22.0343C8.59795 21.8327 8.01962 21.239 7.82335 20.485C7.4668 19.1183 7.4668 16.2671 7.4668 16.2671C7.4668 16.2671 7.4668 13.4158 7.82335 12.0493C8.01962 11.2953 8.59795 10.7015 9.3323 10.5C10.6632 10.1338 16.0001 10.1338 16.0001 10.1338C16.0001 10.1338 21.3371 10.1338 22.6679 10.5ZM14.4001 13.8671V19.2004L18.6668 16.5338L14.4001 13.8671Z"
+                                            fill="white"
+                                        />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__right">
+                        <div class="right__main">
+                            <h6 class="dropbtn" onclick="myFunction1();">
+                                Главная
+                            </h6>
+                            <ul class="__main__list __main__list1">
+                                <li>
+                                    <a href="#"> Мы построили </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Партнёрам </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Рекомендации </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Вакансии </a>
+                                </li>
+                                <li>
+                                    <a href="#"> О компании </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right__projects">
+                            <h6 class="dropbtn" onclick="myFunction2();">
+                                Проекты
+                            </h6>
+                            <ul class="__main__list __main__list2">
+                                <li>
+                                    <a href="#"> Склады </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Логистич центры </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Холодильные камер </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Сэндвич панели </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Проектиорование </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <form action="#" method="get" class="right__form">
+                            <div class="mail">
+                                <h6>Ваш email для связи</h6>
+                                <input
+                                    placeholder="Ваш почтовый ящик"
+                                    type="text"
+                                    name="email"
+                                    value=""
+                                />
+                            </div>
+                            <button class="callback__button" type="submit">
+                                <svg
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 18 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <g clip-path="url(#clip0_1_349)">
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M17.0303 0.969691C17.2341 1.17342 17.3031 1.47584 17.2079 1.74778L11.9579 16.7478C11.8563 17.038 11.5878 17.2369 11.2806 17.2494C10.9733 17.2619 10.6895 17.0856 10.5646 16.8046L7.6818 10.3182L1.1954 7.43538C0.914389 7.31049 0.738092 7.02671 0.750627 6.71945C0.763163 6.41219 0.961991 6.14371 1.25224 6.04213L16.2522 0.792127C16.5242 0.696948 16.8266 0.765962 17.0303 0.969691ZM9.14456 9.91612L11.167 14.4667L14.7064 4.35429L9.14456 9.91612ZM13.6457 3.29362L3.53331 6.83297L8.0839 8.85546L13.6457 3.29362Z"
+                                            fill="black"
+                                        />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_349">
+                                            <rect
+                                                width="18"
+                                                height="18"
+                                                fill="white"
+                                            />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="js/mobile-menu.js"></script>
+        <script>
+            function myFunction1() {
+                let menu_list = document.querySelector(".__main__list1");
+                menu_list.classList.toggle("show__list");
+            }
+            function myFunction2() {
+                let menu_list = document.querySelector(".__main__list2");
+                menu_list.classList.toggle("show__list");
+            }
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function (event) {
+                if (!event.target.matches(".dropbtn")) {
+                    var dropdowns =
+                        document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains("show")) {
+                            openDropdown.classList.remove("show");
+                        }
+                    }
+                }
+            };
+        </script>
+    </body>
+</html>
