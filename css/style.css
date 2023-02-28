@@ -212,11 +212,11 @@ body.active .header__title {
 
 .item__wrapper {
     opacity: 0;
+    display: none;
     position: absolute;
     width: 100%;
     height: 100%;
     background: #000;
-    display: flex;
     justify-content: center;
     align-items: center;
     top: 0;
@@ -227,6 +227,7 @@ body.active .header__title {
 
 .portfolio__item:hover .item__wrapper {
     opacity: 0.7;
+    display: flex;
 }
 
 .portfolio__item img {
@@ -257,6 +258,10 @@ body.active .header__title {
 }
 
 @media (max-width: 550px) {
+    .portfolio__item:hover {
+        transform: scale(1);
+        z-index: 10;
+    }
     .portfolio__item {
         flex: 1 1 95%;
     }
