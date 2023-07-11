@@ -1102,7 +1102,7 @@ select {
 }
 
 .bg-\[url\(\'\/wave\.svg\'\)\] {
-  background-image: url('/wave.svg');
+  background-image: url('../wave.svg');
 }
 
 .bg-fixed {
