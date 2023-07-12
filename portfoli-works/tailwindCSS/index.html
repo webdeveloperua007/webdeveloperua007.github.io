@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailwindCSS</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container py-[26px]">
+            <nav class="w-full flex justify-between items-center">
+                <a href="#">
+                    <img src="img/Logo.svg" alt="logo">
+                </a>
+                <ul class="md:hidden lg:text-lg lg:gap-8 flex gap-12 text-lightblack text-xl font-medium">
+                    <li class="nav__link__hover"><a href="#">About</a></li>
+                    <li class="nav__link__hover"><a href="#">Services</a></li>
+                    <li class="nav__link__hover"><a href="#">Case Studies</a></li>
+                    <li class="nav__link__hover"><a href="#">Careers</a></li>
+                    <li class="nav__link__hover"><a href="#">Blog</a></li>
+                </ul>
+                <div id="burger__menu" class="md:block hidden">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="mobile__menu"
+                    class="overflow-auto  hidden items-center justify-center h-screen w-full bg-white opacity-90 absolute top-0 left-0">
+                    <ul class="=flex flex-col gap-8 text-lightblack text-4xl font-medium">
+                        <li class="nav__link__hover"><a href="#">About</a></li>
+                        <li class="nav__link__hover"><a href="#">Services</a></li>
+                        <li class="nav__link__hover"><a href="#">Case Studies</a></li>
+                        <li class="nav__link__hover"><a href="#">Careers</a></li>
+                        <li class="nav__link__hover"><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container sm:mt-[50px] mt-[100px] mb-[64px] sm:mb-[32px]">
+            <div class="mx-auto flex flex-col align-middle max-w-[615px] items-center text-center">
+                <h1
+                    class="sm:text-[40px] text-black align-middle text-[50px] font-[900] leading-[130%] tracking-[-1.5px]">
+                    Grow your business online.
+                    Get. More. Leads.</h1>
+                <p class="sm:text-lg text-xl font-normal leading-normal tracking-[-0.6px] max-w-[570px] mt-[18px]">Wanna
+                    get serious into digital marketing? Then you need leads and this is where we can help you.</p>
+                <div class="flex gap-[27px] mt-[34px] flex-wrap justify-center">
+                    <button class="buttons bg-lightred text-white hover:text-lightred hover:bg-white">
+                        Start here.
+                    </button>
+                    <button
+                        class="buttons text-lightred bg-white border-lightred hover:bg-lightred hover:text-white">Learn
+                        More</button>
+                </div>
+            </div>
+        </div>
+        <div
+            class="container flex sm:mt-[50px] mt-[100px] mb-[124px] sm:mb-[62px] justify-between gap-5 lg:flex-wrap lg:justify-center">
+            <div class="lg:max-w-[100%] max-w-[480px]">
+                <h2 class="text-darkred text-[20px] font-[700] leading-normal tracking-[-0.6px]">about us</h2>
+                <h3 class="mt-[2px] mb-[10px] text-[36px] font-[900] leading-normal tracking-[-1.08px]">The team behind
+                    the brand.</h3>
+                <p class="lg:max-w-[100%] max-w-[390px] text-[18px] font-normal leading-[150%]">Proin elementum
+                    fermentum auctor. Nulla semper, est
+                    eget congue pellentesque, erat nulla molestie mi,
+                    in finibus leo nisl ac lectus. Praesent non urna. Nulla congue porta lectus in laoreet. Aenean
+                    pellentesque vitae metus id porttitor.t</p>
+                <button class="mt-[21px] buttons bg-lightred text-white hover:text-lightred hover:bg-white">Learn
+                    More</button>
+            </div>
+            <div class="md:max-w-[80%] lg:max-w-[100%] max-w-[445px]">
+                <img src="img/-VHQ0cw2euA.jpg" alt="img">
+            </div>
+        </div>
+    </main>
+    <footer class="bg-darkgray text-white py-[90px] md:py-[40px]">
+        <div class="container flex gap-[150px] md:flex-wrap-reverse md:justify-center md:gap-[50px]">
+            <div>
+                <a href="#">
+                    <img src="img/Logo1.svg" alt="logo">
+                </a>
+                <p class="max-w-[330px] mt-[19px] mb-[13px] text-[20px] font-[400] leading-normal tracking-[-0.6px] ">Sign up for our newsletter to get latest news from us</p>
+                <form action="#">
+                    <input type="text" placeholder="Enter your email" class="w-full rounded-[11px] bg-[#454545] py-[12px] px-[18px] mb-[20px]">
+                    <button class="block px-[60px] buttons bg-lightred text-white hover:text-lightred hover:bg-white">Submit</button>
+                </form>
+            </div>
+            <div>
+                <p class="text-[20px] text-lightred font-[500] leading-normal tracking-[-0.6px] mb-[22px]">Jump to</p>
+                <ul class="text-[20px] font-[500] leading-normal tracking-[-0.6px] flex flex-col gap-3">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function () {
+            $('#burger__menu').click(function () {
+                $(this).toggleClass('open');
+                $('#mobile__menu').toggleClass('mobile__open');
+            });
+        });
+        window.addEventListener("resize", myFunction);
+        function myFunction() {
+            if (window.innerWidth > 768) {
+                $('#burger__menu').removeClass('open');
+                $('#mobile__menu').removeClass('mobile__open');
+            }
+        }
+    </script>
+    </script>
+</body>
+
+</html>
